@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/llcElection"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ElectionActivity"
     android:orientation="vertical">
 
+    <!-- Explicación de la elección -->
     <TextView
         android:id="@+id/tvGreeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/greeting" />
+        android:text="@string/greeting"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/election_description"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <!-- Checkboxes para las opciones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkboxRaenira"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/raenira" />
+
+        <CheckBox
+            android:id="@+id/checkboxAegon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aegon" />
+    </LinearLayout>
+
+    <!-- Información sobre la opción elegida -->
+    <TextView
+        android:id="@+id/tvChoiceInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_choice"
+        android:padding="16dp"
+        android:textSize="16sp" />
+
+    <!-- Botón de "Hincar la rodilla" -->
+    <Button
+        android:id="@+id/btnKneel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/knelt" />
 </androidx.appcompat.widget.LinearLayoutCompat>
+

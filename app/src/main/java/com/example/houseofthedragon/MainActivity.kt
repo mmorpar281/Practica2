@@ -1,38 +1,38 @@
 package com.example.houseofthedragon
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //intent para detectar si se ha pulsado salir.
-        if(intent.getBooleanExtra("Exit",false))
-            finish()
-
-        //Enlace al botón e incorporación de evento "click".
+        // Enlace al botón e incorporación de evento "click".
         val btnAnswer = findViewById<Button>(R.id.btnAnswer)
         btnAnswer.setOnClickListener {
-            goToElection()
-        }
+            val etNombre = findViewById<EditText>(R.id.etName)
+            val nombre = etNombre.text.toString()
 
+            if (nombre.isBlank()) {
+                // Si no se ha introducido un nombre, muestra un mensaje.
+                Toast.makeText(this, "Por favor, introduce un nombre", Toast.LENGTH_SHORT).show()
+            } else {
+                // Si se ha introducido un nombre, se pasa a la siguiente actividad
+                goToElection(nombre)
+            }
+        }
     }
 
-    fun goToElection() {
-        //crear el intent
-        val intent = Intent(this@MainActivity, ElectionActivity::class.java)
-        //tomar el valor del cuadro de texto.
-        val etNombre = this.findViewById<EditText>(R.id.etName)
-        //añadimos la información necesaria al intent
-        intent.putExtra("NAME", etNombre.text.toString())
-
-        //iniciar la nueva actividad
+    private fun goToElection(nombre: String) {
+        // Crear el intent y pasar el nombre.
+        val intent = Intent(this, ElectionActivity::class.java)
+        intent.putExtra("NAME", nombre)
         startActivity(intent)
     }
 }
-

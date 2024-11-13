@@ -3,4 +3,17 @@
     <string name="name">Bienvenido sir, con quién tengo el placer de conversar?</string>
     <string name="answer">Responder</string>
     <string name="greeting">Sir %s, es el momento de que tomes una difícil elección...</string>
+    <string name="election_description">El rey Viserys ha muerto... Debes elegir a su sucesor como rey de los Ándalos y de los Primeros Hombres, Señor de los Siete Reinos y Protector del Reino. Para ello debes decidir entre apoyar a...</string>
+    <string name="raenira">Raenira Targaryen</string>
+    <string name="aegon">Aegon Targaryen</string>
+    <string name="no_choice">Si no tomas una decisión no podrás salir de esta encrucijada.</string>
+    <string name="raenira_selected">Has decidido apoyar a una mujer por encima del primogénito varón... Lo pagarás con sangre.</string>
+    <string name="aegon_selected">Has elegido a Aegon contra la voluntad del difunto rey... Arderás por tu elección... Dracarys!</string>
+    <string name="both_selected">Jugar a dos bandas es muy peligroso... Tu cabeza podrá rodar en cualquier momento.</string>
+    <string name="no_choice_message">No tomaste ninguna decisión. La historia continuará, pero tu destino se ha quedado en la encrucijada.</string>
+    <string name="raenira_message">Has elegido a Raenira... Un futuro incierto te aguarda.</string>
+    <string name="aegon_message">Has elegido a Aegon... El reino será tuyo, pero las consecuencias serán severas.</string>
+    <string name="both_message">Te has jugado a dos bandas, pero este tipo de juego puede terminar en tragedia.</string>
+    <string name="knelt">Hincar la rodilla</string>
+    <string name="exit">Salir</string>
 </resources>
